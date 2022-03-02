@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="A Lecturer" />
+    <title>Demo</title>
+    <script src="validate.js"></script>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: rgb(18, 14, 231);
+    }
+    
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: rgb(46, 33, 33);
+    }
+</style>
+
+<body>
+
+    <p><button onclick="myMove()">Click Me</button></p>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+    </script>
+
+
+
+
+
+    <body>
+        <a href="#"> Button </a>
+        <a href="#"> Button </a>
+        <script type="text/javascript">
+            const buttons = document.querySelectorAll('a')
+            button.array.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                        let x = e.clientX - e.target.offsetLeft;
+                        let y = e.clientY - e.target.offsetLeft;
+
+                        let ripples = document.createElement('span');
+                        ripples.style.left = x + 'px';
+                        ripples.style.left = y + 'px';
+                        this.appendChild(ripples);
+
+                        setTimeout(() => {
+                            ripples.remove()
+
+                        }, 1000)
+
+
+
+                    }
+
+                )
+
+            });
+        </script>
+
+        <div id="container">
+            <div id="animate">My animation will go here</div>
+        </div>
+
+
+    </body>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Creating a Responsivr Website " />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="Author" content="Raed Hassan" />
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+
+
+    <title> application </title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ============================== EXTERNAL START ============================== -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,200&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a9545f17e8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./styles/form.css">
+    <!-- ============================== EXTERNAL END ============================== -->
+</head>
+
+
+<body class="header">
+    <div>
+
+        <nav>
+
+            <a href="index.html"> <img src="styles/images/logoo.png" alt="" /></a>
+
+
+            <div class="navbar">
+
+                <ul>
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="jobs.html">Job Descriptions</a></li>
+                    <li><a href="apply.html">Job Application</a></li>
+                    <li><a href="about.html">My Page</a></li>
+                    <li><a href="enhancements.html">enhancements</a></li>
+                </ul>
+
+            </div>
+
+
+        </nav>
+
+        <h1 class="hh1 text-white">Application</h1>
+
+        <!-- ============================== FORM HTML START ============================== -->
+        <form id="form" class="appbox">
+
+            <fieldset class="fieldset_container">
+                <legend class="text-white"> Personal Information </legend>
+                <div class="p">
+                    <div>
+
+                        <label for="ref">Job Reference Number</label>
+                    </div>
+                    <input type="text" value="A1122" name="JobReference" id="ref" required="required" pattern="[A-Za-z0-9]{5}" readonly />
+                </div>
+                <br />
+                <div class="p">
+                    <div>
+
+                        <label for="fname">First Name  </label>
+                    </div>
+                    <div class="position-relative">
+                        <input type="text" name="first name" id="fname" required="required" maxlength="20" placeholder="First Name" />
+                        <p id="fname_error"></p>
+                    </div>
+                </div>
+                <br />
+                <div class="p">
+                    <div>
+
+                        <label for="lname">Family Name</label>
+                    </div>
+                    <input type="text" name="last name" id="lname" required="required" maxlength="20" placeholder="Family Name" />
+                    <p id="lname_error"></p>
+                </div>
+                <br />
+                <div class="p">
+                    <div>
+
+                        <label for="dob">Date of Birth</label>
+                    </div>
+                    <input type="text" id="datepicker" placeholder="dd-mm-yy" required />
+                    <small id="datepicker_error" class="text-red"></small>
+                </div>
+                <br />
+            </fieldset>
+            <br />
+            <fieldset class="fieldset_container">
+                <legend class="text-white"> Gender </legend>
+
+                <div class="p">
+                    <legend class="text-white"> Gender </legend>
+                    <p class="d-flex">
+                        <label><input id="male" type="radio" name="Gender" required="required" value="Male" checked="checked" /> Male</label>
+                        <label><input id="female" type="radio" name="Gender" required="required" value="Female" />Female</label>
+                        <label><input id="other" type="radio" name="Gender" required="required" value="Other" />Other</label>
+                    </p>
+                </div>
+
+            </fieldset>
+            <br />
+
+            <fieldset class="fieldset_container">
+                <legend class="text-white"> Location </legend>
+                <div class="p">
+                    <div>
+
+                        <label for="addi"> Street Address </label>
+                    </div>
+                    <div>
+                        <input type="text" name="street adress" id="addi" maxlength="40" placeholder="Street Address" />
+                    </div>
+                </div>
+                <br />
+                <div class="p">
+                    <div>
+
+                        <label for="suburb">Suburb/Town  </label>
+                    </div>
+                    <div>
+                        <input type="text" name="Suburb/Town" id="suburb" required="required" maxlength="40" minlength="2" placeholder="Suburb/Town" />
+                        <p id="suburb_error"></p>
+                    </div>
+                </div>
+                <br />
+                <div class="p">
+                    <label for="State"> State </label>
+                    <select name="State" id="State" required="required">
+                            <option selected disabled value=""> State </option>
+                        <option value="Vic">Vic </option>
+                        <option value="NSW">NSW </option>
+                        <option value="QLD">QLD </option>
+                        <option value="NT">NT </option>
+                        <option value="WA">WA </option>
+                        <option value="SA">SA </option>
+                        <option value="TAS">TAS </option>
+                        <option value="ACT">ACT </option>
+                    </select>
+                    <p id="state_error"></p>
+                </div>
+                <br />
+                <div class="p">
+                    <div>
+
+                        <label for="postcode">Postcode</label>
+                    </div>
+                    <div>
+                        <input type="text" name="postcode" id="postcode" required="required" pattern="[A-Za-z0-9]{4}" placeholder="Postcode" />
+                        <small id="postcode_error" class="text-red"></small>
+                    </div>
+                </div>
+                <br />
+            </fieldset>
+            <br />
+
+            <fieldset class="fieldset_container">
+                <legend class="text-white"> Contact </legend>
+                <div class="p">
+                    <div>
+
+                        <label for="email"> Email Address  </label>
+                    </div>
+                    <div>
+                        <input type="email" name="Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="required" size="40" placeholder="Email Address" />
+                        <p id="email_error"></p>
+                    </div>
+                </div>
+                <br />
+                <div class="p">
+                    <div>
+
+                        <label for="phone"> Phone Number </label>
+                    </div>
+                    <div>
+                        <input type="number" name="phone nmber" id="phone" pattern="[0-9]" placeholder="Phone Number" />
+                        <p id="phone_error"></p>
+                    </div>
+                </div>
+                <br />
+                <div class="p">
+                    <p class="d-flex">
+                        <label><input id="HTML" type="checkbox" name="Skills" value="HTML" checked />HTML</label>
+                        <label><input id="CSS" type="checkbox" name="Skills" value="CSS" />CSS</label>
+                        <label><input id="JavaScript" type="checkbox" name="Skills" value="JavaScript" />JavaScript</label>
+                        <label><input id="PHP" type="checkbox" name="Skills" value="PHP" />PHP</label>
+                        <label><input id="MySQL" type="checkbox" name="Skills" value="MySQL" />MySQL</label>
+                        <label><input id="Other" type="checkbox" name="Skills" value="Other" />Other</label>
+                    </p>
+                </div>
+
+                <br />
+                <div class="p">
+                    <div>
+
+                        <label for="comments">Other Skills</label>
+                    </div>
+                    <div>
+                        <textarea id="comments" name="comments" placeholder="Write description here..." rows="4" cols="40"></textarea>
+                        <p id="comment_error"></p>
+                    </div>
+                </div>
+
+
+            </fieldset>
+
+
+            <input id="btn_sub" type="submit" class="applybtn" value="Apply" />
+
+            <a id="btn_sub2" href="confirm.html" class="applybtn">
+                Apply
+            </a>
+        </form>
+        <!-- ============================== FORM HTML END ============================== -->
+
+
+        <br />
+        <br />
+        <br />
+    </div>
+
+
+    <!-- ============================== scripts ============================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="./scripts/jobs.js"></script>
+    <!-- ============================== scripts ============================== -->
+</body>
+
+</html>
